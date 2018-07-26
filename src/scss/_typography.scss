@@ -1,0 +1,33 @@
+body {
+  background-color: $gray-200;
+}
+
+// h3 heading
+.heading-2 {
+  font-size: $h2-font-size;
+  font-weight: $headings-font-weight;
+  letter-spacing: 0.1rem;
+}
+
+// h3 heading
+.heading-3 {
+  font-size: $h3-font-size;
+  font-weight: $headings-font-weight;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+}
+
+.paragraph {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-light;
+  line-height: 2;
+  color: $gray-400;
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $green-light;
+    }
+  }
+}

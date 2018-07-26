@@ -1,0 +1,36 @@
+@import '~bootstrap/scss/bootstrap';
+@import '../../../scss/variables';
+.header {
+  height: 70rem;
+  padding: 4rem 0rem;
+  margin-bottom: 8rem;
+
+  &__text-box {
+    width: 50%;
+    padding: 4rem;
+  }
+
+  &__text--main {
+    font-size: $display1-size;
+    font-weight: $headings-font-weight;
+    text-transform: capitalize;
+    line-height: $headings-line-height;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2rem;
+  }
+
+  &__text--sub {
+    font-size: $display5-size;
+    color: $gray-500;
+    font-weight: $display1-weight;
+    letter-spacing: 0.1rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.disclaimer {
+  padding: 4rem 0rem;
+  margin: 8rem 0rem;
+  letter-spacing: 0.1rem;
+  font-size: $font-size-lg;
+}
