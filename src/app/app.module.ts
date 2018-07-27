@@ -9,6 +9,7 @@ import { NavbarComponent } from './shared/layout/navbar/navbar.component';
 import { FormsComponent } from './home/forms/forms.component';
 import { StatsComponent } from './home/stats/stats.component';
 import { ClientsComponent } from './home/clients/clients.component';
+import { ShortenPipe } from './shorten.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ClientsComponent } from './home/clients/clients.component';
     NavbarComponent,
     FormsComponent,
     StatsComponent,
-    ClientsComponent
+    ClientsComponent,
+    ShortenPipe
   ],
   imports: [
     BrowserModule,

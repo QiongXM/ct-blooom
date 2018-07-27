@@ -2,7 +2,14 @@ body {
   background-color: $gray-200;
 }
 
-// h3 heading
+// h1 heading
+.heading-1 {
+  font-size: $h1-font-size;
+  font-weight: $headings-font-weight;
+  letter-spacing: 0.1rem;
+}
+
+// h2 heading
 .heading-2 {
   font-size: $h2-font-size;
   font-weight: $headings-font-weight;

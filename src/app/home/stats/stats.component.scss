@@ -1,0 +1,24 @@
+@import '../../../scss/variables';
+
+.stats {
+  padding: 4rem 0rem;
+  margin: 8rem 0rem;
+  text-align: center;
+
+  &__title {
+    display: inline-block;
+    padding-bottom: 6rem;
+    margin-bottom: 6rem;
+    border-bottom: 1px solid $gray-300;
+  }
+
+  &__stat {
+    color: $gray-400;
+    font-size: 6rem;
+  }
+}
+
+.last {
+  margin-bottom: 0rem;
+  border-bottom: none;
+}

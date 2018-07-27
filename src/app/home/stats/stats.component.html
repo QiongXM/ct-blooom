@@ -1,0 +1,13 @@
+<section class="stats">
+  <div *ngFor="let stat of stats; let last = last">
+    <div class="heading-3 mb-md">
+      Over
+    </div>
+    <div class="heading-1 mb-md">{{stat.stat | shorten}}
+      <sup class=stats__stat>1</sup>
+    </div>
+    <div class="heading-3">
+      <span class="stats__title" [ngClass]="{last: last}">{{stat.title}}</span>
+    </div>
+  </div>
+</section>
