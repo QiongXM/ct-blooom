@@ -1,4 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
+@import '../../../../scss/mixins';
+
 .navigation {
   height: 6.5rem;
   top: 0;
@@ -7,6 +9,11 @@
 
   &__logo {
     height: 100%;
+
+    @include respond(md) {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   &__text {
@@ -23,5 +30,14 @@
       background-color: #2a964a;
       padding: 0 0.2rem;
     }
+
+    @include respond(md) {
+      text-align: center;
+    }
+  }
+
+  @include respond(md) {
+    display: block !important;
+    margin-bottom: 3rem;
   }
 }

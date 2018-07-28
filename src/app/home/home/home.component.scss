@@ -2,7 +2,7 @@
 @import '../../../scss/variables';
 .header {
   height: 80rem;
-  padding: 6rem 0rem;
+  padding: 6rem 2rem;
   margin-bottom: 8rem;
 
   &__text-box {
@@ -32,10 +32,9 @@
   }
 
   .forms {
-    width: 40%;
     border: 1px solid $gray-200;
     box-shadow: 0 0.1rem 0.5rem $gray-200;
-    padding: 4rem;
+    padding: 3rem;
     display: inline-block;
 
     &__title {
