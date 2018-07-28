@@ -16,6 +16,7 @@ export class FormsComponent implements OnInit {
 
   form1: FormGroup;
   form2: FormGroup;
+  submitted: Boolean = false;
 
   ngOnInit() {
     this.form1 = new FormGroup({
@@ -65,7 +66,25 @@ export class FormsComponent implements OnInit {
     return this.firstname.errors.minlength;
   }
 
+  get emailRequired() {
+    return this.email.errors.required;
+  }
+
+  get emailInvalid() {
+    return this.email.errors.email;
+  }
+
   onSubmit() {
-    console.log(this.form1);
+    if (this.form1.valid) {
+      this.submitted = true;
+      console.log('Form Submitted!');
+      this.form1.reset();
+    }
+  }
+
+  onLogin() {
+    if (this.form2.valid) {
+      this.form2.reset();
+    }
   }
 }
