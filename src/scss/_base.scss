@@ -9,6 +9,30 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px;
+
+  @include respond(xs) {
+    font-size: 43.75%; // width < 360px
+  }
+
+  @include respond(sm) {
+    font-size: 50%; // width < 576px
+  }
+
+  @include respond(md) {
+    font-size: 56%; // width < 768px
+  }
+
+  @include respond(lg) {
+    font-size: 62.5%; // width < 768px
+  }
+
+  @include respond(xl) {
+    font-size: 75%; //  width < 1800px
+  }
+}
+
+.main {
+  background-color: $gray-100;
 }
 
 .container {

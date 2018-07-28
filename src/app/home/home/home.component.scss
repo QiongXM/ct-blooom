@@ -1,17 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
 @import '../../../scss/variables';
 .header {
-  height: 70rem;
+  height: 80rem;
   padding: 6rem 0rem;
   margin-bottom: 8rem;
 
   &__text-box {
-    width: 50%;
-    padding: 4rem;
+    padding: 4rem 8rem;
+    display: inline-block;
   }
 
   &__text--main {
-    font-size: $display1-size;
+    font-size: $h1-font-size;
     font-weight: $headings-font-weight;
     text-transform: capitalize;
     line-height: $headings-line-height;
@@ -25,6 +25,23 @@
     font-weight: $paragraph-font-weight;
     letter-spacing: 0.1rem;
     margin-bottom: 6rem;
+  }
+
+  &__bg {
+    width: 100%;
+  }
+
+  .forms {
+    width: 40%;
+    border: 1px solid $gray-200;
+    box-shadow: 0 0.1rem 0.5rem $gray-200;
+    padding: 4rem;
+    display: inline-block;
+
+    &__title {
+      margin: 0 auto 4rem auto;
+      padding-left: 2.5rem;
+    }
   }
 }
 

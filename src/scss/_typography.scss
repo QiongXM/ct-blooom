@@ -7,6 +7,12 @@ body {
   font-size: $h1-font-size;
   font-weight: $headings-font-weight;
   letter-spacing: 0.1rem;
+
+  &--xl {
+    font-size: $display1-font-size;
+    font-weight: $headings-font-weight;
+    letter-spacing: 0.1rem;
+  }
 }
 
 // h2 heading
@@ -25,10 +31,14 @@ body {
 }
 
 .paragraph {
-  font-size: $font-size-lg;
+  font-size: $default-font-size;
   font-weight: $paragraph-font-weight;
   line-height: 2;
   color: $gray-300;
+
+  &--lg {
+    font-size: $default-font-size-lg;
+  }
 
   &__link {
     &:link,
