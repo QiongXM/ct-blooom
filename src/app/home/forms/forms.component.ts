@@ -15,7 +15,7 @@ export class FormsComponent implements OnInit {
   ages = ['Less than 1'].concat(_.range(1, 165));
 
   form1: FormGroup;
-  selected = 65;
+  form2: FormGroup;
 
   ngOnInit() {
     this.form1 = new FormGroup({
@@ -27,6 +27,9 @@ export class FormsComponent implements OnInit {
       dobday: new FormControl(null, Validators.required),
       dobyear: new FormControl(null, Validators.required),
       age: new FormControl(null, Validators.required)
+    });
+    this.form2 = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email])
     });
   }
 
@@ -48,6 +51,10 @@ export class FormsComponent implements OnInit {
 
   get age() {
     return this.form1.get('age');
+  }
+
+  get email() {
+    return this.form2.get('email');
   }
 
   get firstnameRequired() {

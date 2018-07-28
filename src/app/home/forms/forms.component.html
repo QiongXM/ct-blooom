@@ -1,5 +1,8 @@
 <div class="forms">
-  <div class="heading-3 forms__title">We'd fill this out for you, but we don't have E.S.P.</div>
+  <div class="heading-3 forms__title">
+    <span *ngIf="form1">We'd fill this out for you, but we don't have E.S.P.</span>
+    <span *ngIf="form2">First things first, let's make sure we keep you safe</span>
+  </div>
   <form [formGroup]="form1" (ngSubmit)="onSubmit()">
     <div class="form-group mb-md">
       <label class="form-label" for="firstName">My first name is ...</label>
@@ -29,7 +32,7 @@
         <div *ngIf="dobday.touched && dobday.invalid" class="alert alert-danger paragraph">Please select the year.</div>
       </div>
     </div>
-    <div class="form-group mb-md ">
+    <div class="form-group mb-md">
       <div class="form-label ">I'd like to smash my alarm clock(retire) at age...</div>
       <div class="dropdown">
         <select class="dropdown--age" formControlName="age">
@@ -43,4 +46,18 @@
       <button class="btn btn--green" type="submit" [disabled]="form1.invalid">Start now</button>
     </div>
   </form>
+  <form [formGroup]="form2" (ngSubmit)="onSubmit()">
+    <div class="form-group mb-lg">
+      <label class="form-label mb-lg" for="email">Why do you need to create an account? Easy. Safety first kids. Plus, If you get distracted(i.e. your boss walks past
+        your desk), you can pick up right where you left off.</label>
+      <input formControlName="email" id="email" class="form-control" type="text">
+      <div *ngIf="email.touched && email.invalid" class="alert alert-danger paragraph">
+        Email is required.
+      </div>
+    </div>
+    <div class="submit mb-xs">
+      <button class="btn btn--gray" type="submit" [disabled]="form1.invalid">Next</button>
+    </div>
+  </form>
+  <div class="form2__text">Alredy have an account?Sign In</div>
 </div>
