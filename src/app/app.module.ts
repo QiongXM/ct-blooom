@@ -1,6 +1,7 @@
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '../../node_modules/@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
@@ -24,6 +25,7 @@ import { ShortenPipe } from './shorten.pipe';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         path: '',

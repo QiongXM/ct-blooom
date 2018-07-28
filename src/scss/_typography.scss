@@ -26,9 +26,9 @@ body {
 
 .paragraph {
   font-size: $font-size-lg;
-  font-weight: $font-weight-light;
+  font-weight: $paragraph-font-weight;
   line-height: 2;
-  color: $gray-400;
+  color: $gray-300;
 
   &__link {
     &:link,

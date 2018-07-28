@@ -1,3 +1,37 @@
-<p>
-  forms works!
-</p>
+<div class="forms">
+  <div class="heading-3 forms__title">We'd fill this out for you, but we don't have E.S.P.</div>
+  <form [formGroup]="form1">
+    <div class="form-group mb-md">
+      <label class="form-label" for="firstName">My first name is ...</label>
+      <input formControlName="firstname" id="firstName" class="form-control" type="text">
+    </div>
+    <div class="form-group mb-md">
+      <label class="form-label">I was born on...</label>
+      <div class="dropdown">
+        <select formControlName="dob-month" class="dropdown--month mr-2">
+          <option [ngValue]="null" selected disabled>month</option>
+          <option [value]="month" *ngFor="let month of months">{{month}}</option>
+        </select>
+        <select formControlName="dob-day" class="dropdown--day mr-2 ">
+          <option [ngValue]="null" selected disabled>day</option>
+          <option [value]="day" *ngFor="let day of days">{{day}}</option>
+        </select>
+        <select formControlName="dob-year" class="dropdown--year">
+          <option [ngValue]="null" selected disabled>year</option>
+          <option [value]="year" *ngFor="let year of years">{{year}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group mb-md ">
+      <div class="form-label ">I'd like to smash my alarm clock(retire) at age...</div>
+      <div class="dropdown">
+        <select class="dropdown--age" formControlName="age">
+          <option [value]="age" *ngFor="let age of ages">{{age}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="submit ">
+      <button class="btn btn--green" type="submit ">Start now</button>
+    </div>
+  </form>
+</div>

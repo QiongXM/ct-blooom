@@ -2,7 +2,7 @@
 @import '../../../scss/variables';
 .header {
   height: 70rem;
-  padding: 4rem 0rem;
+  padding: 6rem 0rem;
   margin-bottom: 8rem;
 
   &__text-box {
@@ -20,9 +20,9 @@
   }
 
   &__text--sub {
-    font-size: $display5-size;
+    font-size: $font-size-lg;
     color: $gray-500;
-    font-weight: $display1-weight;
+    font-weight: $paragraph-font-weight;
     letter-spacing: 0.1rem;
     margin-bottom: 6rem;
   }
