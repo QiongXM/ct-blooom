@@ -12,6 +12,13 @@ body {
     font-size: $display1-font-size;
     font-weight: $headings-font-weight;
     letter-spacing: 0.1rem;
+
+    @include respond(sm) {
+      font-size: 8rem;
+    }
+  }
+  @include respond(sm) {
+    font-size: 4rem;
   }
 }
 
@@ -20,6 +27,10 @@ body {
   font-size: $h2-font-size;
   font-weight: $headings-font-weight;
   letter-spacing: 0.1rem;
+
+  @include respond(sm) {
+    font-size: 3rem;
+  }
 }
 
 // h3 heading
@@ -27,7 +38,11 @@ body {
   font-size: $h3-font-size;
   font-weight: $headings-font-weight;
   letter-spacing: 0.1rem;
-  text-transform: capitalize;
+
+  @include respond(sm) {
+    font-size: 2.8rem;
+    font-weight: 400;
+  }
 }
 
 .paragraph {

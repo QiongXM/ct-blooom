@@ -5,7 +5,7 @@
 .header {
   width: 100%;
   padding: 6rem 4rem;
-  margin: 0 0 6rem 0;
+  margin-bottom: 6rem;
 
   &__text-box {
     padding: 4rem 8rem;
@@ -14,6 +14,12 @@
     @include respond(md) {
       padding: 0;
       width: 41.7%;
+    }
+
+    @include respond(sm) {
+      text-align: center;
+      width: 100%;
+      order: 1;
     }
   }
 
@@ -29,6 +35,11 @@
       font-size: 5rem;
       padding: 4rem 0 0 2rem;
     }
+
+    @include respond(sm) {
+      font-size: 4rem;
+      padding: 1.8rem 0 0 0;
+    }
   }
 
   &__text--sub {
@@ -41,31 +52,48 @@
     @include respond(md) {
       padding: 4rem 0 0 2rem;
     }
+
+    @include respond(sm) {
+      padding: 0;
+      margin-bottom: 2rem;
+    }
   }
 
   &__bg {
     width: 100%;
+
+    @include respond(sm) {
+      display: none;
+    }
   }
 
   .forms {
     border: 1px solid $gray-200;
     box-shadow: 0 0.1rem 0.5rem $gray-200;
-    padding: 3rem;
+    padding: 6rem 3rem;
     display: inline-block;
-
-    &__title {
-      margin: 0 auto 4rem auto;
-      padding-left: 2.5rem;
-    }
 
     @include respond(md) {
       width: 58.3%;
+    }
+
+    @include respond(sm) {
+      margin: 1rem auto;
+      order: 2;
+      width: 65%;
     }
   }
 
   @include respond(md) {
     padding: 5rem 0 3rem 3rem;
     margin: 0 0 3rem 0;
+  }
+
+  @include respond(sm) {
+    padding: 0;
+    margin: 0 0 3rem 0;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -78,5 +106,10 @@
   @include respond(md) {
     padding: 3rem;
     margin: 6rem 0;
+  }
+
+  @include respond(sm) {
+    padding: 3rem;
+    margin: 4rem 0;
   }
 }

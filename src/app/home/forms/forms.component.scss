@@ -3,6 +3,11 @@
 @import '../../../scss/utils';
 @import '../../../scss/button';
 
+.form-title {
+  margin: 0 auto 4rem auto;
+  padding-left: 2.5rem;
+}
+
 .form-control {
   display: block;
   padding: 2rem;
