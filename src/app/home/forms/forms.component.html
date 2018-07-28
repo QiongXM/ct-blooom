@@ -1,37 +1,46 @@
 <div class="forms">
   <div class="heading-3 forms__title">We'd fill this out for you, but we don't have E.S.P.</div>
-  <form [formGroup]="form1">
+  <form [formGroup]="form1" (ngSubmit)="onSubmit()">
     <div class="form-group mb-md">
       <label class="form-label" for="firstName">My first name is ...</label>
       <input formControlName="firstname" id="firstName" class="form-control" type="text">
+      <div *ngIf="firstname.touched && firstname.invalid" class="alert alert-danger paragraph">
+        <div *ngIf="firstnameRequired">First name is required!</div>
+        <div *ngIf="firstnameMinlength">First name should be minimum {{firstnameMinlength.requiredLength}} characters</div>
+      </div>
     </div>
     <div class="form-group mb-md">
       <label class="form-label">I was born on...</label>
       <div class="dropdown">
-        <select formControlName="dob-month" class="dropdown--month mr-2">
+        <select formControlName="dobmonth" class="dropdown--month mr-2">
           <option [ngValue]="null" selected disabled>month</option>
           <option [value]="month" *ngFor="let month of months">{{month}}</option>
         </select>
-        <select formControlName="dob-day" class="dropdown--day mr-2 ">
+        <div *ngIf="dobmonth.touched && dobmonth.invalid" class="alert alert-danger paragraph">Please select the month.</div>
+        <select formControlName="dobday" class="dropdown--day mr-2 ">
           <option [ngValue]="null" selected disabled>day</option>
           <option [value]="day" *ngFor="let day of days">{{day}}</option>
         </select>
-        <select formControlName="dob-year" class="dropdown--year">
+        <div *ngIf="dobyear.touched && dobyear.invalid" class="alert alert-danger paragraph">Please select the day.</div>
+        <select formControlName="dobyear" class="dropdown--year">
           <option [ngValue]="null" selected disabled>year</option>
           <option [value]="year" *ngFor="let year of years">{{year}}</option>
         </select>
+        <div *ngIf="dobday.touched && dobday.invalid" class="alert alert-danger paragraph">Please select the year.</div>
       </div>
     </div>
     <div class="form-group mb-md ">
       <div class="form-label ">I'd like to smash my alarm clock(retire) at age...</div>
       <div class="dropdown">
         <select class="dropdown--age" formControlName="age">
+          <option [ngValue]="null" selected disabled>65</option>
           <option [value]="age" *ngFor="let age of ages">{{age}}</option>
         </select>
+        <div *ngIf="age.touched && age.invalid" class="alert alert-danger paragraph">Please select your age.</div>
       </div>
     </div>
-    <div class="submit ">
-      <button class="btn btn--green" type="submit ">Start now</button>
+    <div class="submit">
+      <button class="btn btn--green" type="submit" [disabled]="form1.invalid">Start now</button>
     </div>
   </form>
 </div>

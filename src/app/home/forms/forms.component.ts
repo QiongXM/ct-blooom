@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
 import * as _ from 'lodash';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-forms',
@@ -19,11 +19,46 @@ export class FormsComponent implements OnInit {
 
   ngOnInit() {
     this.form1 = new FormGroup({
-      firstname: new FormControl(null),
-      'dob-month': new FormControl(null),
-      'dob-day': new FormControl(null),
-      'dob-year': new FormControl(null),
-      age: new FormControl(65)
+      firstname: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3)
+      ]),
+      dobmonth: new FormControl(null, Validators.required),
+      dobday: new FormControl(null, Validators.required),
+      dobyear: new FormControl(null, Validators.required),
+      age: new FormControl(null, Validators.required)
     });
+  }
+
+  get firstname() {
+    return this.form1.get('firstname');
+  }
+
+  get dobmonth() {
+    return this.form1.get('dobmonth');
+  }
+
+  get dobday() {
+    return this.form1.get('dobday');
+  }
+
+  get dobyear() {
+    return this.form1.get('dobyear');
+  }
+
+  get age() {
+    return this.form1.get('age');
+  }
+
+  get firstnameRequired() {
+    return this.firstname.errors.required;
+  }
+
+  get firstnameMinlength() {
+    return this.firstname.errors.minlength;
+  }
+
+  onSubmit() {
+    console.log(this.form1);
   }
 }
