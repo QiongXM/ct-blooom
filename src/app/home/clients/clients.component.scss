@@ -1,3 +1,5 @@
+@import '../../../scss/mixins';
+
 .clients {
   padding: 4rem 0rem;
   margin: 8rem 0rem;
@@ -7,5 +9,9 @@
     &:not(:last-child) {
       margin-right: 8rem;
     }
+  }
+
+  @include respond(md) {
+    padding: 0 8rem;
   }
 }

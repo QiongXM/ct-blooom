@@ -1,7 +1,7 @@
 @import '../../../scss/variables';
 
 .stats {
-  padding: 4rem 0rem;
+  padding: 3rem 0rem;
   margin: 8rem 0rem;
   text-align: center;
 
@@ -19,6 +19,7 @@
 }
 
 .last {
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   border-bottom: none;
+  padding: 0;
 }

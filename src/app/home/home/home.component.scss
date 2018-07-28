@@ -1,13 +1,20 @@
 @import '~bootstrap/scss/bootstrap';
 @import '../../../scss/variables';
+@import '../../../scss/mixins';
+
 .header {
-  height: 80rem;
-  padding: 6rem 2rem;
-  margin-bottom: 8rem;
+  width: 100%;
+  padding: 6rem 4rem;
+  margin: 0 0 6rem 0;
 
   &__text-box {
     padding: 4rem 8rem;
     display: inline-block;
+
+    @include respond(md) {
+      padding: 0;
+      width: 41.7%;
+    }
   }
 
   &__text--main {
@@ -17,14 +24,23 @@
     line-height: $headings-line-height;
     letter-spacing: 0.3rem;
     margin-bottom: 2rem;
+
+    @include respond(md) {
+      font-size: 5rem;
+      padding: 4rem 0 0 2rem;
+    }
   }
 
   &__text--sub {
-    font-size: $font-size-lg;
+    font-size: $default-font-size-lg;
     color: $gray-500;
     font-weight: $paragraph-font-weight;
     letter-spacing: 0.1rem;
     margin-bottom: 6rem;
+
+    @include respond(md) {
+      padding: 4rem 0 0 2rem;
+    }
   }
 
   &__bg {
@@ -41,12 +57,26 @@
       margin: 0 auto 4rem auto;
       padding-left: 2.5rem;
     }
+
+    @include respond(md) {
+      width: 58.3%;
+    }
+  }
+
+  @include respond(md) {
+    padding: 5rem 0 3rem 3rem;
+    margin: 0 0 3rem 0;
   }
 }
 
 .disclaimer {
-  padding: 4rem 0rem;
-  margin: 8rem 0rem;
+  padding: 6rem;
+  margin: 6rem 0rem;
   letter-spacing: 0.1rem;
-  font-size: $font-size-lg;
+  font-size: $default-font-size;
+
+  @include respond(md) {
+    padding: 3rem;
+    margin: 6rem 0;
+  }
 }
