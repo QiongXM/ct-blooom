@@ -1,0 +1,37 @@
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
+
+.stats {
+  padding: 3rem 0rem;
+  margin: 8rem 0rem;
+  text-align: center;
+
+  &__title {
+    display: inline-block;
+    padding-bottom: 6rem;
+    margin-bottom: 6rem;
+    border-bottom: 1px solid $gray-200;
+  }
+
+  &__stat {
+    color: $gray-400;
+    top: -4rem;
+    left: -1rem;
+  }
+
+  &__text {
+    @include respond(sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include respond(sm) {
+    padding: 0;
+  }
+}
+
+.last {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding: 0;
+}

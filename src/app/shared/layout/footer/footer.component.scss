@@ -1,0 +1,14 @@
+@import '../../../../scss/variables';
+.footer {
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.copyright {
+  padding-top: 3rem;
+  color: $gray-400;
+}
+
+.info {
+  float: right;
+  color: $gray-400;
+}

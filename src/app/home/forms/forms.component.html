@@ -1,0 +1,62 @@
+<div class="heading-3 form-title">
+  <span *ngIf="!submitted">We'd fill this out for you, but we don't have E.S.P.</span>
+  <span *ngIf="submitted">First things first, let's make sure we keep you safe</span>
+</div>
+<form [formGroup]="form1" (ngSubmit)="onSubmit()" [hidden]="submitted">
+  <div class="form-group mb-md">
+    <label class="form-label" for="firstName">My first name is ...</label>
+    <input formControlName="firstname" id="firstName" class="form-control" type="text">
+    <div *ngIf="firstname.touched && firstname.invalid" class="alert alert-danger paragraph">
+      <div *ngIf="firstnameRequired">First name is required!</div>
+      <div *ngIf="firstnameMinlength">First name should be minimum {{firstnameMinlength.requiredLength}} characters</div>
+    </div>
+  </div>
+  <div class="form-group mb-md">
+    <label class="form-label">I was born on...</label>
+    <div class="dropdown">
+      <select formControlName="dobmonth" class="dropdown--month mr-2">
+        <option [ngValue]="null" selected disabled>month</option>
+        <option [value]="month" *ngFor="let month of months">{{month}}</option>
+      </select>
+      <div *ngIf="dobmonth.touched && dobmonth.invalid" class="alert alert-danger paragraph">Please select the month.</div>
+      <select formControlName="dobday" class="dropdown--day mr-2 ">
+        <option [ngValue]="null" selected disabled>day</option>
+        <option [value]="day" *ngFor="let day of days">{{day}}</option>
+      </select>
+      <div *ngIf="dobyear.touched && dobyear.invalid" class="alert alert-danger paragraph">Please select the day.</div>
+      <select formControlName="dobyear" class="dropdown--year">
+        <option [ngValue]="null" selected disabled>year</option>
+        <option [value]="year" *ngFor="let year of years">{{year}}</option>
+      </select>
+      <div *ngIf="dobday.touched && dobday.invalid" class="alert alert-danger paragraph">Please select the year.</div>
+    </div>
+  </div>
+  <div class="form-group mb-md">
+    <label class="form-label">I'd like to smash my alarm clock(retire) at age...</label>
+    <div class="dropdown">
+      <select class="dropdown--age" formControlName="age">
+        <option [ngValue]="null" selected disabled>65</option>
+        <option [value]="age" *ngFor="let age of ages">{{age}}</option>
+      </select>
+      <div *ngIf="age.touched && age.invalid" class="alert alert-danger paragraph">Please select your age.</div>
+    </div>
+  </div>
+  <div class="submit">
+    <button class="btn btn--green" type="submit" [disabled]="form1.invalid">Start now</button>
+  </div>
+</form>
+<form [formGroup]="form2" (ngSubmit)="onLogin()" [hidden]="!submitted">
+  <div class="form-group mb-lg">
+    <label class="form-label mb-lg" for="email">Why do you need to create an account? Easy. Safety first kids. Plus, If you get distracted(i.e. your boss walks past
+      your desk), you can pick up right where you left off.</label>
+    <input formControlName="email" id="email" class="form-control" type="text">
+    <div *ngIf="email.touched && email.invalid" class="alert alert-danger paragraph">
+      <div *ngIf="emailRequired">Email is required!</div>
+      <div *ngIf="emailInvalid">Please enter a valid email!</div>
+    </div>
+  </div>
+  <div class="submit mb-xs">
+    <button class="btn btn--gray" type="submit" [disabled]="form2.invalid">Next</button>
+  </div>
+</form>
+<div class="form2__text" *ngIf="submitted">Alredy have an account?Sign In</div>

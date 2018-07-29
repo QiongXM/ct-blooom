@@ -1,0 +1,25 @@
+@import '../../../scss/mixins';
+
+.clients {
+  padding: 4rem 0rem;
+  margin: 8rem 0rem;
+  text-align: center;
+
+  &__logo {
+    &:not(:last-child) {
+      margin-right: 8rem;
+
+      @include respond(sm) {
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  @include respond(md) {
+    padding: 0 8rem;
+  }
+
+  @include respond(xs) {
+    padding: 0 3rem;
+  }
+}

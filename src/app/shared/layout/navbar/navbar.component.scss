@@ -1,0 +1,44 @@
+@import '~bootstrap/scss/bootstrap';
+@import '../../../../scss/mixins';
+
+.navigation {
+  height: 6.5rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 4rem 0 4rem;
+
+  &__logo {
+    height: 100%;
+
+    @include respond(md) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    color: $gray-600;
+
+    &--green {
+      color: #57ad74;
+      display: inline;
+    }
+
+    &__word-style {
+      text-transform: uppercase;
+      color: $white;
+      background-color: #2a964a;
+      padding: 0 0.2rem;
+    }
+
+    @include respond(md) {
+      text-align: center;
+    }
+  }
+
+  @include respond(md) {
+    display: block !important;
+    margin-bottom: 3rem;
+  }
+}
