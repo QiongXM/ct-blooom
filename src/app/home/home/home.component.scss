@@ -40,6 +40,11 @@
       font-size: 4rem;
       padding: 1.8rem 0 0 0;
     }
+
+    @include respond(xs) {
+      font-size: 3rem;
+      padding: 1rem 0 0 0;
+    }
   }
 
   &__text--sub {
@@ -81,6 +86,10 @@
       margin: 1rem auto;
       order: 2;
       width: 65%;
+    }
+    @include respond(sm) {
+      width: 90%;
+      padding: 2rem 1rem;
     }
   }
 

@@ -23,11 +23,13 @@ export class ShortenPipe implements PipeTransform {
 
       return n;
     } else if (value >= 1000000 && value <= 999999999) {
-      n = n.substr(0, l) + '.' + n.substr(-6, 1) + ' Million';
+      n = n.substr(0, l) + '.' + n.substr(-6, 1) + 'Million';
       return n;
     } else if (value >= 1000000000 && value <= 999999999999) {
-      n = n.substr(0, o) + '.' + n.substr(-9, 1) + ' Billion';
+      n = n.substr(0, o) + '.' + n.substr(-9, 1) + 'Billion';
       return n;
+    } else {
+      return 'Get a new pipe';
     }
   }
 }

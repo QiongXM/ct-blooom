@@ -12,5 +12,7 @@ export class StatsComponent implements OnInit {
   ];
   constructor() {}
 
+  mobile: Boolean = false;
+
   ngOnInit() {}
 }
