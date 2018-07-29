@@ -1,0 +1,81 @@
+@import '~bootstrap/scss/bootstrap';
+@import '../../../scss/variables';
+@import '../../../scss/utils';
+@import '../../../scss/button';
+
+.form-title {
+  margin: 0 auto 4rem auto;
+  padding-left: 2.5rem;
+}
+
+.form-control {
+  display: block;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  font-size: $default-font-size-lg;
+  color: $gray-300;
+}
+
+.form-group {
+  text-align: center;
+}
+
+.form-label {
+  font-size: $default-font-size-lg;
+  color: $gray-300;
+  font-weight: $paragraph-font-weight;
+}
+
+.dropdown {
+  &--month {
+    height: 4rem;
+    width: 15rem;
+    border-radius: 0.5rem;
+    font-size: $default-font-size-lg;
+    color: $gray-300;
+    background-color: $dropdown-bg;
+    font-style: italic;
+  }
+  &--day {
+    height: 4rem;
+    width: 7rem;
+    border-radius: 0.5rem;
+    font-size: $default-font-size-lg;
+    color: $gray-300;
+    background-color: $dropdown-bg;
+    font-style: italic;
+  }
+
+  &--year {
+    height: 4rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    font-size: $default-font-size-lg;
+    color: $gray-300;
+    background-color: $dropdown-bg;
+    font-style: italic;
+  }
+
+  &--age {
+    height: 4rem;
+    width: 7rem;
+    border-radius: 0.5rem;
+    font-size: $default-font-size-lg;
+    color: $gray-300;
+    background-color: $dropdown-bg;
+  }
+
+  &__selected {
+    font-style: italic;
+  }
+}
+
+.submit {
+  text-align: center;
+}
+
+.form2 {
+  &__text {
+    text-align: center;
+  }
+}

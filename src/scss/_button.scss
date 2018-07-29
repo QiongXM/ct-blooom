@@ -1,0 +1,26 @@
+.btn {
+  height: 5rem;
+  width: 15rem;
+  border-radius: 0.5rem;
+
+  &:hover,
+  &:active {
+    background-color: $green-light;
+  }
+
+  &--green {
+    background-color: $green-dark;
+    font-size: $default-font-size-lg;
+    color: $white;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+  }
+
+  &--gray {
+    background-color: $gray-400;
+    font-size: $default-font-size-lg;
+    color: $white;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+  }
+}

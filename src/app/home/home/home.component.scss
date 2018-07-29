@@ -1,0 +1,124 @@
+@import '~bootstrap/scss/bootstrap';
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
+
+.header {
+  width: 100%;
+  padding: 6rem 4rem;
+  margin-bottom: 6rem;
+
+  &__text-box {
+    padding: 4rem 8rem;
+    display: inline-block;
+
+    @include respond(md) {
+      padding: 0;
+      width: 41.7%;
+    }
+
+    @include respond(sm) {
+      text-align: center;
+      width: 100%;
+      order: 1;
+    }
+  }
+
+  &__text--main {
+    font-size: $h1-font-size;
+    font-weight: $headings-font-weight;
+    text-transform: capitalize;
+    line-height: $headings-line-height;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2rem;
+
+    @include respond(md) {
+      font-size: 5rem;
+      padding: 4rem 0 0 2rem;
+    }
+
+    @include respond(sm) {
+      font-size: 4rem;
+      padding: 1.8rem 0 0 0;
+    }
+
+    @include respond(xs) {
+      font-size: 3rem;
+      padding: 1rem 0 0 0;
+    }
+  }
+
+  &__text--sub {
+    font-size: $default-font-size-lg;
+    color: $gray-500;
+    font-weight: $paragraph-font-weight;
+    letter-spacing: 0.1rem;
+    margin-bottom: 6rem;
+
+    @include respond(md) {
+      padding: 4rem 0 0 2rem;
+    }
+
+    @include respond(sm) {
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__bg {
+    width: 100%;
+
+    @include respond(sm) {
+      display: none;
+    }
+  }
+
+  .forms {
+    border: 1px solid $gray-200;
+    box-shadow: 0 0.1rem 0.5rem $gray-200;
+    padding: 6rem 3rem;
+    display: inline-block;
+
+    @include respond(md) {
+      width: 58.3%;
+    }
+
+    @include respond(sm) {
+      margin: 1rem auto;
+      order: 2;
+      width: 65%;
+    }
+    @include respond(sm) {
+      width: 90%;
+      padding: 2rem 1rem;
+    }
+  }
+
+  @include respond(md) {
+    padding: 5rem 0 3rem 3rem;
+    margin: 0 0 3rem 0;
+  }
+
+  @include respond(sm) {
+    padding: 0;
+    margin: 0 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.disclaimer {
+  padding: 6rem;
+  margin: 6rem 0rem;
+  letter-spacing: 0.1rem;
+  font-size: $default-font-size;
+
+  @include respond(md) {
+    padding: 3rem;
+    margin: 6rem 0;
+  }
+
+  @include respond(sm) {
+    padding: 3rem;
+    margin: 4rem 0;
+  }
+}
