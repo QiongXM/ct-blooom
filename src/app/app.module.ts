@@ -11,6 +11,7 @@ import { FormsComponent } from './home/forms/forms.component';
 import { StatsComponent } from './home/stats/stats.component';
 import { ClientsComponent } from './home/clients/clients.component';
 import { ShortenPipe } from './shorten.pipe';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ShortenPipe } from './shorten.pipe';
     FormsComponent,
     StatsComponent,
     ClientsComponent,
-    ShortenPipe
+    ShortenPipe,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { ShortenPipe } from './shorten.pipe';
       {
         path: '',
         component: HomeComponent
-      }
+      },
+      { path: '**', component: NotFoundComponent }
     ])
   ],
   providers: [],
