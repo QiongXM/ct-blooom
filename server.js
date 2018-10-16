@@ -1,8 +1,11 @@
 const express = require('express');
 const path = require('path');
+const secure = require('ssl-express-www');
 
 const app = express();
 
+// Force SSL
+app.use(secure);
 app.use(express.static(__dirname + '/dist/ct-blooom'));
 
 app.all('*', (req, res) => {
