@@ -1,6 +1,10 @@
 {
   "name": "ct-blooom",
   "version": "0.0.0",
+  "engines": {
+    "node": "11.6.0",
+    "npm": "6.5.0-next.0"
+  },
   "scripts": {
     "ng": "ng serve",
     "start": "node server.js",
